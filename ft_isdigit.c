@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Noctis <Noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 09:24:26 by Noctis            #+#    #+#             */
-/*   Updated: 2024/10/21 00:38:56 by Noctis           ###   ########.fr       */
+/*   Created: 2024/10/16 11:26:10 by Noctis            #+#    #+#             */
+/*   Updated: 2024/10/20 10:55:03 by Noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdio.h>
-
-int		ft_isalpha(int c);
-int     ft_isdigit(int c);
-int	    ft_isalnum(int c);
-
-
-#endif
+int	ft_isdigit(int c)
+{
+	if ('0' <= c && c <= '9')
+		return (1);
+	return (0);
+}

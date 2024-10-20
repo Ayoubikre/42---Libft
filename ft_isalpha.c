@@ -6,8 +6,15 @@
 /*   By: Noctis <Noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:19:06 by Noctis            #+#    #+#             */
-/*   Updated: 2024/10/16 09:20:08 by Noctis           ###   ########.fr       */
+/*   Updated: 2024/10/16 11:25:42 by Noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include
+#include "libft.h"
+
+int	ft_isalpha(int c)
+{
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
+		return (1);
+	return (0);
+}
