@@ -21,8 +21,3 @@ clean:
 
 fclean: clean
 	rm $(target)
-
--*- Makfile -*-
-
-
-
