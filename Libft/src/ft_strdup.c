@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Noctis <Noctis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 09:24:26 by Noctis            #+#    #+#             */
-/*   Updated: 2024/10/21 00:38:56 by Noctis           ###   ########.fr       */
+/*   Created: 2024/10/25 18:52:05 by aakritah          #+#    #+#             */
+/*   Updated: 2024/10/25 19:13:09 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+char	*ft_strdup(const char *src)
+{
+	size_t	i;
+	size_t	s1;
+	char	*t;
 
-#include <unistd.h>
-#include <stdio.h>
-
-int		ft_isalpha(int c);
-int     ft_isdigit(int c);
-int	    ft_isalnum(int c);
-
-
-#endif
+	s1 = 0;
+	while (src[s1])
+		s1++;
+	t = malloc((s1 + 1) * 1);
+	if (!t)
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		t[i] = src[i];
+		i++;
+	}
+	t[i] = '\0';
+	return (t);
+}
