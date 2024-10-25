@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:09:53 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/24 21:51:27 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/25 19:33:19 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	while (i < len)
 	{
 		temp[i] = s[i];
-		printf("| %c |\n", temp[i]);
 		i++;
 	}
 	i = 0;
