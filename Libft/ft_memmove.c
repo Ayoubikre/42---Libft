@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t.c                                                :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 16:02:16 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/24 20:24:40 by aakritah         ###   ########.fr       */
+/*   Created: 2024/10/24 15:09:53 by aakritah          #+#    #+#             */
+/*   Updated: 2024/10/24 21:51:27 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-// #include "libft.h"
+#include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	*d;
+	size_t				i;
+	unsigned char		*d;
 	const unsigned char	*s;
+	unsigned char		temp[len];
 
 	i = 0;
-	d = (unsigned char *)dst;
+	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-
-	while (i<n)
+	if (d == s)
+		return (dest);
+	while (i < len)
 	{
-		*d++ = *s++;
+		temp[i] = s[i];
+		printf("| %c |\n", temp[i]);
 		i++;
 	}
-	return (dst);
-}
-
-int	main(void)
-{
-	char		t2[] = "123456789";
-	// printf("orginal1 : %s\n", memcpy(t2+1, t2, 5));
-	printf("orginal2 : %s\n\n", ft_memcpy(t2+1, t2, 5));
-	printf("orginal3 : %s\n", t2);
-    
+	i = 0;
+	while (i < len)
+	{
+		d[i] = temp[i];
+		i++;
+	}
+	return (dest);
 }
