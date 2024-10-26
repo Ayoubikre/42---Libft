@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 21:48:25 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/26 16:00:12 by aakritah         ###   ########.fr       */
+/*   Created: 2024/10/26 13:48:39 by aakritah          #+#    #+#             */
+/*   Updated: 2024/10/26 16:50:33 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hy, const char *nd, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	s1;
+	char	*dst;
 
-	i = 0;
-	s1 = ft_strlen(nd);
-	if (!hy && len == 0)
+	if (!s)
 		return (NULL);
-	if (s1 == 0)
-		return ((char *)hy);
-	while (hy[i] && i + s1 <= len)
+	i = 0;
+	if ((unsigned int)ft_strlen(s) <= start)
+		return (ft_strdup(""));
+	s1 = strlen(s + start);
+	if (len < s1)
+		s1 = len;
+	dst = malloc((s1 + 1) * 1);
+	if (!dst)
+		return (NULL);
+	while (i < s1)
 	{
-		if (hy[i] == nd[0])
-		{
-			if (ft_strncmp(hy + i, nd, s1) == 0)
-				return ((char *)(hy + i));
-		}
+		dst[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	dst[i] = '\0';
+	return (dst);
 }

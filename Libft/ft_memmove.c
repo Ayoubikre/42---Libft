@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:09:53 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/26 13:06:38 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/26 20:21:26 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	unsigned char		tmp1;
 	unsigned char		tmp2;
 
+	if (!src && !dest)
+		return (NULL);
 	d = dest;
 	s = src;
 	if (d == s)
