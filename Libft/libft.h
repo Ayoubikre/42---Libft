@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:15:55 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/25 19:32:03 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/26 13:32:55 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
+# include <string.h>
+# include <.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -23,7 +26,7 @@ int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);

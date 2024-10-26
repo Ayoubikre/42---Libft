@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 12:24:38 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/23 15:30:23 by aakritah         ###   ########.fr       */
+/*   Created: 2024/10/23 21:48:25 by aakritah          #+#    #+#             */
+/*   Updated: 2024/10/26 13:30:18 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+char	*ft_strnstr(const char *hy, const char *nd, size_t len)
 {
-	int	i;
+	size_t	i;
+	size_t	s1;
 
 	i = 0;
-	while (str[i])
+	s1 = ft_strlen(nd);
+	if (s1 == 0)
+		return ((char *)hy);
+	while (hy[i] && i + s1 <= len)
+	{
+		if (hy[i] == nd[0])
+		{
+			if (ft_strncmp(hy + i, nd, s1) == 0)
+				return ((char *)(hy + i));
+		}
 		i++;
-	return (i);
+	}
+	return (NULL);
 }
