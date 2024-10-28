@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:48:39 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/26 16:50:33 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:41:12 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if ((unsigned int)ft_strlen(s) <= start)
 		return (ft_strdup(""));
-	s1 = strlen(s + start);
+	s1 = ft_strlen(s + start);
 	if (len < s1)
 		s1 = len;
 	dst = malloc((s1 + 1) * 1);
