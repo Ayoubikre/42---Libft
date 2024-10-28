@@ -6,12 +6,16 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:56:14 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 16:15:03 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:36:53 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "libft.h"
 
-// char *ft_itoa(int n)
+// char	*ft_itoa(int n)
 // {
+// 	char	*t;
+
+// 	t = ft_calloc(n, 1);
+// 	return (t);
 // }

@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:20:06 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 15:54:09 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:15:21 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ static char	*ft_copy(const char *s, char c, size_t *i)
 	return (t);
 }
 
-static void	ft_free(char **t, size_t count)
+static void	ft_free(char **t)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < count)
+	while (t[i])
 	{
 		free(t[i]);
 		i++;
@@ -96,7 +96,7 @@ char	**ft_split(char const *s, char c)
 		t[k] = ft_copy(s, c, &i);
 		if (!t[k])
 		{
-			ft_free(t, count);
+			ft_free(t);
 			return (NULL);
 		}
 		k++;

@@ -6,34 +6,48 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:09:53 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/26 20:21:26 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/28 21:00:37 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+static void	ft_copy1(unsigned char *ds, const unsigned char *sr, size_t len)
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
-	unsigned char		tmp1;
-	unsigned char		tmp2;
+	size_t	i;
 
-	if (!src && !dest)
-		return (NULL);
-	d = dest;
-	s = src;
-	if (d == s)
-		return (dest);
 	i = 0;
-	tmp1 = s[i];
 	while (i < len)
 	{
-		tmp2 = s[i + 1];
-		d[i] = tmp1;
-		tmp1 = tmp2;
+		ds[i] = sr[i];
 		i++;
 	}
+}
+
+static void	ft_copy2(unsigned char *ds, const unsigned char *sr, size_t len)
+{
+	int	i;
+
+	i = (int)(len - 1);
+	while (i >= 0)
+	{
+		ds[i] = sr[i];
+		i--;
+	}
+}
+
+void	*ft_memmove(void *dest, const void *src, size_t len)
+{
+	unsigned char		*ds;
+	const unsigned char	*sr;
+
+	sr = (const unsigned char *)src;
+	ds = (unsigned char *)dest;
+	if (ds == sr)
+		return (dest);
+	else if (ds < sr)
+		ft_copy1(ds, sr, len);
+	else if (ds > sr)
+		ft_copy2(ds, sr, len);
 	return (dest);
 }

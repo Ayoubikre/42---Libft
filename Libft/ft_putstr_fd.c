@@ -6,7 +6,14 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:22:22 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 16:22:23 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:37:50 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (s)
+		write(fd, s, ft_strlen(s));
+}
