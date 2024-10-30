@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 16:51:14 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/26 18:31:34 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/30 19:13:24 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*dst;
 
 	if (!s1 && !s2)
-		return (NULL);
+		return (ft_strdup(""));
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	n1 = ft_strlen(s1);
 	n2 = ft_strlen(s2);
 	dst = malloc((n1 + n2 + 1) * 1);

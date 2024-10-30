@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:20:06 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/29 13:01:39 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/30 20:06:36 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,16 +81,16 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	k;
-	size_t	count;
 	char	**t;
 
 	i = 0;
 	k = 0;
-	count = ft_count(s, c);
-	t = malloc((count + 1) * sizeof(char *));
+	if (!s)
+		return (NULL);
+	t = malloc((ft_count(s, c) + 1) * sizeof(char *));
 	if (!t)
 		return (NULL);
-	while (k < count)
+	while (k < ft_count(s, c))
 	{
 		ft_filter(s, c, &i);
 		t[k] = ft_copy(s, c, &i);
