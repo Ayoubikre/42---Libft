@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:15:55 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/30 19:43:29 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/30 20:29:00 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 // caloc overflowe and reurn null inn case of the * opretation
 // atoi overflow for 0 amd -1 long
 // rename bonus files
-// handle null in split
+
 // check if fd < 0 and return null;
 
 // atoi

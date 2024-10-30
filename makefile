@@ -94,7 +94,7 @@ bonus: $(OBJS2)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(OBJS2)
 
 fclean: clean
 	@rm -f $(NAME)
