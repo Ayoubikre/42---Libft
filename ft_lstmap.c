@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 16:27:59 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/29 18:46:59 by aakritah         ###   ########.fr       */
+/*   Created: 2024/10/29 20:12:04 by aakritah          #+#    #+#             */
+/*   Updated: 2024/10/30 15:39:02 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	i;
+	t_list	*t;
+	t_list	*n;
+	void	*temp;
 
-	i = 0;
+	if (!lst || !f || !del)
+		return (NULL);
+	t = NULL;
 	while (lst)
 	{
-		i++;
+		temp = f(lst->content);
+		n = ft_lstnew(temp);
+		if (!n)
+		{
+			del(temp);
+			ft_lstclear(&t, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&t, n);
 		lst = lst->next;
 	}
-	return (i);
+	return (t);
 }

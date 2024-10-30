@@ -6,16 +6,14 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:15:55 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/29 21:32:09 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:44:44 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int					ft_isalpha(int c);
@@ -53,7 +51,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-// char	*ft_itoa(int n);
+char				*ft_itoa(int n);
 
 // third part
 typedef struct s_list
@@ -76,6 +74,10 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 
 // caloc overflowe and reurn null inn case of the * opretation
 // atoi overflow for 0 amd -1 long
-// itoi
+// rename bonus files
+// handle null in split
+
+// atoi
+// bzero
 
 #endif

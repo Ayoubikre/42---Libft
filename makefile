@@ -1,4 +1,4 @@
-# cc = gcc
+# cc = cc
 
 # cflags= -Wall -Wextra -Werror
 
@@ -28,7 +28,7 @@
 # ----------------------------------------------
 
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SRCS1  = ft_isalpha.c \
 			ft_isdigit.c \
@@ -57,6 +57,7 @@ SRCS1  = ft_isalpha.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_split.c \
+			ft_itoa.c \
 			ft_strmapi.c \
 			ft_striteri.c \
 			ft_putchar_fd.c \
@@ -84,12 +85,10 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS2)
-	ar rc $(NAME) $(OBJS2)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJS2)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
