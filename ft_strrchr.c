@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:02:27 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 18:26:52 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:12:57 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	s1 = ft_strlen(s);
 	t = NULL;
-	while (i <= s1)
+	while (i < s1 + 1)
 	{
 		if (s[i] == (char)c)
 			t = (char *)(s + i);

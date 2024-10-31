@@ -6,13 +6,14 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:15:55 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/30 20:29:00 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/31 19:30:21 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -72,13 +73,22 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
-// caloc overflowe and reurn null inn case of the * opretation
-// atoi overflow for 0 amd -1 long
-// rename bonus files
+// rename bonus files and add _bonus
 
-// check if fd < 0 and return null;
+// check if fd < 0 and return (null);
+// calloc 0 in eather argument  :->   malloc(1)
+// check if makfile is relinking
+// memcopy chack null of both , ism
+// test memset 1337 to 42 or somthing like that ...
+// write (char*).. befor ther malloc return (// strlcpy cahrk dst size=0 and s =null return null);
 
-// atoi
-// bzero
+// mem
+	-> we use unsigne cause ascii is betwen 0->127 and extanded ascii is 128->255 ,
+// and if we dont the valuse will overflow to negative and 200!=-56
+//
+//			unsigned char memory[] = {100, 150, 200, 250};
+//			ft_memchr(memory, 200, 4);
+
+// atoi calloc
 
 #endif

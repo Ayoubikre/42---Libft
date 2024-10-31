@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:11:31 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/25 19:30:13 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/10/31 16:23:28 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*t = s;
+	const unsigned char	*t;
 	size_t				i;
 
+	t = (const unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
