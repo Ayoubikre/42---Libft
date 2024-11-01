@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:43:19 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 18:36:08 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:45:40 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n == -2147483648)
 	{
 		ft_putstr_fd("-2147483648", fd);

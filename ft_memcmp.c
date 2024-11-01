@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:11:45 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/31 16:42:11 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/01 20:48:42 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int		i;
+	size_t				i;
 	const unsigned char	*t1;
 	const unsigned char	*t2;
 

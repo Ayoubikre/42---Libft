@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:39:09 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 16:41:58 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:46:01 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s)
+	if (s && fd >= 0)
 	{
 		write(fd, s, ft_strlen(s));
 		write(fd, "\n", 1);

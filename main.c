@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 21:48:25 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/01 21:00:45 by aakritah         ###   ########.fr       */
+/*   Created: 2024/11/01 16:55:14 by aakritah          #+#    #+#             */
+/*   Updated: 2024/11/01 21:49:37 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <fcntl.h>
 
-char	*ft_strnstr(const char *hy, const char *nd, size_t len)
+int	main(void)
 {
-	size_t	i;
-	size_t	s1;
-
-	i = 0;
-	s1 = ft_strlen(nd);
-	if (!hy && len == 0)
-		return (NULL);
-	if (s1 == 0)
-		return ((char *)hy);
-	while (hy[i] && i + s1 <= len)
-	{
-		if (hy[i] == nd[0])
-		{
-			if (ft_strncmp(hy + i, nd, s1) == 0)
-				return ((char *)(hy + i));
-		}
-		i++;
-	}
-	return (NULL);
+    char t1[]=("lo......");
+    char t2[]=("xxxxxxxxx");
+    char t3[]=("lo......");
+    char t4[]=("xxxxxxxxx");
 }

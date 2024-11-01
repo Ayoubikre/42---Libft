@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:33:12 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 19:26:27 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/01 19:08:32 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,9 @@ char	*ft_strtrim(char const *str, char const *set)
 	size_t	i;
 	size_t	j;
 
-	if (!str || str[0] == '\0')
+	if (!str || !set)
+		return (NULL);
+	if (str[0] == '\0')
 		return (ft_strdup(""));
 	i = 0;
 	while (str[i])

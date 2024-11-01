@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:15:55 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/31 19:30:21 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/01 21:32:44 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,21 +74,29 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
 // rename bonus files and add _bonus
+// renam bonus file in the makfie
 
-// check if fd < 0 and return (null);
-// calloc 0 in eather argument  :->   malloc(1)
-// check if makfile is relinking
+
 // memcopy chack null of both , ism
+
 // test memset 1337 to 42 or somthing like that ...
-// write (char*).. befor ther malloc return (// strlcpy cahrk dst size=0 and s =null return null);
+
 
 // mem
-	-> we use unsigne cause ascii is betwen 0->127 and extanded ascii is 128->255 ,
+//	-> we use unsigne cause ascii is betwen 0->127 and extanded ascii is 128->255 ,
 // and if we dont the valuse will overflow to negative and 200!=-56
 //
 //			unsigned char memory[] = {100, 150, 200, 250};
 //			ft_memchr(memory, 200, 4);
 
-// atoi calloc
+// remove .dstore
+
+// bonus should not relink when -> make bonus
+// in bonus add  ars $(name) $@
+
+
+// learne about implicit and explicit castiong 
+
+// learn about the negatinve nuber in bytes 
 
 #endif

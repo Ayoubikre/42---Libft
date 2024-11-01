@@ -60,7 +60,7 @@ $(NAME): $(OBJS)
 bonus: $(OBJS2)
 	ar rcs $(NAME) $(OBJS2)
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

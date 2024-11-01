@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:22:22 by aakritah          #+#    #+#             */
-/*   Updated: 2024/10/28 16:37:50 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:45:15 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
+	if (s && fd >= 0)
 		write(fd, s, ft_strlen(s));
 }
