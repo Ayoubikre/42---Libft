@@ -6,13 +6,13 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:56:14 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/01 10:42:52 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/02 12:08:07 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(int n)
+static int	ft_count(int n)
 {
 	int	i;
 

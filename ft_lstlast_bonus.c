@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 16:55:14 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/01 21:49:37 by aakritah         ###   ########.fr       */
+/*   Created: 2024/10/29 16:59:02 by aakritah          #+#    #+#             */
+/*   Updated: 2024/11/02 10:24:44 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <fcntl.h>
 
-int	main(void)
+t_list	*ft_lstlast(t_list *lst)
 {
-    char t1[]=("lo......");
-    char t2[]=("xxxxxxxxx");
-    char t3[]=("lo......");
-    char t4[]=("xxxxxxxxx");
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

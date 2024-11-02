@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:15:55 by aakritah          #+#    #+#             */
-/*   Updated: 2024/11/01 21:32:44 by aakritah         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:49:28 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ void				*ft_memmove(void *dest, const void *src, size_t len);
 void				*ft_calloc(size_t count, size_t size);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
-
-// second part
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
@@ -53,15 +51,12 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_itoa(int n);
-
-// third part
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 
 }					t_list;
-
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
@@ -72,31 +67,5 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-
-// rename bonus files and add _bonus
-// renam bonus file in the makfie
-
-
-// memcopy chack null of both , ism
-
-// test memset 1337 to 42 or somthing like that ...
-
-
-// mem
-//	-> we use unsigne cause ascii is betwen 0->127 and extanded ascii is 128->255 ,
-// and if we dont the valuse will overflow to negative and 200!=-56
-//
-//			unsigned char memory[] = {100, 150, 200, 250};
-//			ft_memchr(memory, 200, 4);
-
-// remove .dstore
-
-// bonus should not relink when -> make bonus
-// in bonus add  ars $(name) $@
-
-
-// learne about implicit and explicit castiong 
-
-// learn about the negatinve nuber in bytes 
 
 #endif

@@ -35,16 +35,15 @@ SRCS1  = ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
 
-BONUS = ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c\
-			ft_lstmap.c \
+BONUS = ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c\
+			ft_lstmap_bonus.c \
 
 OBJS = $(SRCS1:.c=.o)
 
@@ -52,16 +51,16 @@ OBJS2 = $(BONUS:.c=.o)
 
 NAME = libft.a
 
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS2)
-	ar rcs $(NAME) $(OBJS2)
 
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
+	ar rcs $(NAME) $@
 
 clean:
 	@rm -f $(OBJS) $(OBJS2)
